@@ -1,0 +1,30 @@
+@import "./_Variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $primaryColor;
+}
+
+.container {
+    max-width: 940px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryColor;
+}
+
+body {
+    font-family: $primaryff,sans-serif;
+}
+
+
+@import './components/Header/_Header';
+@import './components/Navbar/_Navbar';
+@import './components/About/_About';

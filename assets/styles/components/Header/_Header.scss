@@ -1,0 +1,43 @@
+@import '../../_Variables.scss';
+
+header {
+    background: url('./../images/bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-height: 769px;
+    color: #fff;
+
+    .container {
+        padding: 40px 0 70px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__logotype--link {
+
+        }
+
+        .header__heading {
+            &--title {
+                font-family: 'Bebas Neue';
+                font-size: 60px;
+                line-height: 70px;
+                letter-spacing: 5.70937px;
+                color: #fff;
+            }
+
+            &--subtitle {
+                font-size: 16px;
+                line-height: 19px;
+                color: #fff;
+            }
+
+        }
+
+        .header__scroll {
+            color: #fff;
+        }
+    }
+}

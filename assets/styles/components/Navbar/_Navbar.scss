@@ -1,0 +1,40 @@
+
+
+#navbar {
+    height: 65px;
+    margin-bottom: 55px;
+
+    .container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .navbar__menu {
+            
+            &--item {
+                display: inline-block;
+                margin-left: 48px;
+                
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    .navbar__menu--link {
+                        color: #00A4E5;
+                    }
+                }
+
+                .navbar__menu--link {
+                    transition: all .2s linear;
+                    text-transform: uppercase;
+
+                    &.active {
+                        color: #00A4E5;
+                    }
+                }
+            }
+        }
+    }
+}
