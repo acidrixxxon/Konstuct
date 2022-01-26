@@ -1,0 +1,49 @@
+
+
+section#GIT {
+    min-height: 500px;
+    background: url('./../images/GIT-bg.png') bottom center no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: $TabletScreen) {
+        min-height: 350px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+        .GIT__heading {
+            margin-top: 120px;
+            text-align: center;
+
+
+            @media screen and (max-width: $MobileScreen) {
+                margin-top: 50px;
+            }
+
+            &--title {
+                max-width: 350px;
+                font-size: 2rem;
+                line-height: 36px;
+                letter-spacing: 0.15px;
+                margin-bottom: 35px;
+
+                @media screen and (max-width: $MobileScreen) {
+                    margin-bottom: 2rem;
+                    font-size: calc(1rem + 2vw);
+                }
+            }
+
+            &--link {
+                background-color: #00A4E5;
+                color: #fff;
+                font-size: 13px;
+                line-height: 15px;
+                letter-spacing: 0.5px;
+                padding: 11px 26px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

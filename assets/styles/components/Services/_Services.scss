@@ -1,0 +1,146 @@
+
+
+section#services {
+    margin-bottom: 115px;
+
+    @media screen and (max-width: $TabletScreen) {
+        margin-bottom: 0;
+    }
+    
+    .container {
+
+        .services__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 75px;
+
+            .services__header--title {
+                margin-right: calc(2rem + 5vw);
+                flex-shrink: 0;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 2.30625px;
+                text-transform: uppercase;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 50px;
+                    height: 2px;
+                    background-color: #00a4e5;
+                    bottom: -10px;
+                    left: 0;
+                    display: block;
+                    position: absolute;
+                }
+
+                @media screen and (max-width: $TabletScreen) {
+                    margin-right: 0;
+                }
+
+                @media screen and (max-width: $MobileScreen) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .services__header--text {
+                    max-width: 405px;
+                    font-size: 11px;
+                    line-height: 19px;
+                    color: #48555B;
+                    letter-spacing: 0.2px;
+
+                    @media screen and (max-width: $TabletScreen) {
+                        display: none;
+                    }
+            }
+
+            .services__header--link {
+                    height: 40px;
+                    min-width: 150px;
+                    margin-left: 30px;
+                    background-color: #00A4E5;
+                    text-align: center;
+                    display: block;
+                    color: #fff;
+                    font-size: 13px;
+                    line-height: 15px;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    @media screen and (max-width: $MobileScreen) {
+                        margin-left: 0;
+                    }
+            }
+
+            @media screen and (max-width: $MobileScreen) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+        }
+
+        .services__all-services {
+            display: flex;
+
+            .services__all-services__item {
+                padding: 38px 23px;
+                border: 1px solid #E6E6E6;
+                margin-right: 28px;
+
+                .services__all-services__item--icon {
+                    margin-bottom: 25px;
+                }
+
+                .services__all-services__item--title {
+                    margin-bottom: 13px;
+
+                    h2 {
+                        font-size: 16px;
+                        letter-spacing: 0.426667px;
+                        line-height: 24px;
+                    }
+                }
+
+                .services__all-services__item--text {
+
+                    p {
+                        font-size: 13px;
+                        line-height: 23px;
+                        letter-spacing: 0.1875px;
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @media screen and (max-width: $TabletScreen) {
+                    flex-basis: 45%;
+                    margin-bottom: 30px;
+
+                    &:nth-child(2) {
+                        margin-right: 0;
+                    }
+                }
+
+                @media screen and (max-width: 610px) {
+                    flex-basis: 55%;
+                    margin-right: 0;
+                }
+
+                @media screen and (max-width: $MobileScreen){
+                    flex-basis: 100%;
+                }
+            }
+
+            @media screen and (max-width: $TabletScreen) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}

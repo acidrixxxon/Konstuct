@@ -20,6 +20,11 @@ a {
     color: $primaryColor;
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
 body {
     font-family: $primaryff,sans-serif;
 }
@@ -28,3 +33,6 @@ body {
 @import './components/Header/_Header';
 @import './components/Navbar/_Navbar';
 @import './components/About/_About';
+@import './components/Services/_Services';
+@import './components/GIT/_GetInTouch';
+@import './components/Footer/_Footer';

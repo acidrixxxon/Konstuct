@@ -26,6 +26,15 @@ header {
                 line-height: 70px;
                 letter-spacing: 5.70937px;
                 color: #fff;
+
+                @media screen and (max-width: $TabletScreen) {
+                    font-size: calc(3rem + 5vw);
+                    margin-bottom: 10px;
+                }
+                @media screen and (max-width: $MobileScreen) {
+                    font-size: calc(2rem + 4vw);
+                    line-height: 3rem
+                }
             }
 
             &--subtitle {
