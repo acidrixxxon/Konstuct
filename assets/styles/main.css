@@ -19,6 +19,10 @@ a {
   color: #48555B;
 }
 
+li {
+  list-style: none;
+}
+
 button {
   border: none;
   outline: none;
@@ -28,7 +32,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-header {
+#header {
   background: url("./../images/bg.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
@@ -36,7 +40,14 @@ header {
   color: #fff;
 }
 
-header .container {
+@media screen and (max-width: 480px) {
+  #header {
+    height: 450px;
+    min-height: auto;
+  }
+}
+
+#header .container {
   padding: 40px 0 70px;
   text-align: center;
   display: -webkit-box;
@@ -54,7 +65,13 @@ header .container {
           align-items: center;
 }
 
-header .container .header__heading--title {
+@media screen and (max-width: 768px) {
+  #header .container {
+    padding: 20px 0 30px;
+  }
+}
+
+#header .container .header__heading--title {
   font-family: 'Bebas Neue';
   font-size: 60px;
   line-height: 70px;
@@ -63,26 +80,26 @@ header .container .header__heading--title {
 }
 
 @media screen and (max-width: 768px) {
-  header .container .header__heading--title {
+  #header .container .header__heading--title {
     font-size: calc(3rem + 5vw);
     margin-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  header .container .header__heading--title {
-    font-size: calc(2rem + 4vw);
-    line-height: 3rem;
+  #header .container .header__heading--title {
+    font-size: calc(1rem + 4vw);
+    line-height: 2rem;
   }
 }
 
-header .container .header__heading--subtitle {
-  font-size: 16px;
+#header .container .header__heading--subtitle {
+  font-size: 14px;
   line-height: 19px;
   color: #fff;
 }
 
-header .container .header__scroll {
+#header .container .header__scroll {
   color: #fff;
 }
 
@@ -91,6 +108,17 @@ header .container .header__scroll {
   margin-bottom: 55px;
   border-bottom: 1px solid #e6e6e6;
   position: relative;
+  -webkit-box-shadow: 0px 5px 9px -2px rgba(34, 60, 80, 0.54);
+          box-shadow: 0px 5px 9px -2px rgba(34, 60, 80, 0.54);
+}
+
+#navbar.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  background-color: #fff;
 }
 
 #navbar .container {
@@ -605,8 +633,8 @@ section#services .container .services__all-services .services__all-services__ite
 
 @media screen and (max-width: 480px) {
   section#services .container .services__all-services .services__all-services__item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
 }
 
@@ -704,10 +732,41 @@ footer#footer .container .footer__signup .footer__signup--title {
   letter-spacing: 0.846154px;
 }
 
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__signup .footer__signup--title {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  footer#footer .container .footer__signup .footer__signup--title {
+    margin-right: 0;
+  }
+}
+
+footer#footer .container .footer__signup .footer__signup__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 footer#footer .container .footer__signup .footer__signup__form .footer__signup__form--input {
   height: 40px;
   max-width: 250px;
   padding: 16px 11px;
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__signup .footer__signup__form .footer__signup__form--input {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer#footer .container .footer__signup .footer__signup__form .footer__signup__form--input {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
 }
 
 footer#footer .container .footer__signup .footer__signup__form .footer__signup__form--button {
@@ -720,8 +779,161 @@ footer#footer .container .footer__signup .footer__signup__form .footer__signup__
   line-height: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__signup .footer__signup__form .footer__signup__form--button {
+    padding: 11px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__signup {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  footer#footer .container .footer__signup {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer#footer .container .footer__main {
   min-height: 240px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__main {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer#footer .container .footer__main {
+    margin-top: 20px;
+  }
+}
+
+footer#footer .container .footer__main .footer__main__block * {
+  color: #fff;
+}
+
+footer#footer .container .footer__main .footer__main__block--title {
+  color: #fff !important;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.846154px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+footer#footer .container .footer__main .footer__main__block svg {
+  margin-bottom: 16px;
+}
+
+footer#footer .container .footer__main .footer__main__block--para {
+  font-size: 11px;
+  line-height: 19px;
+  letter-spacing: 0.85px;
+  color: #fff;
+}
+
+footer#footer .container .footer__main .footer__main__block__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: calc(1rem + 3vw);
+}
+
+footer#footer .container .footer__main .footer__main__block__container .footer__main__block__list {
+  margin-right: calc(1rem + 2vw);
+}
+
+footer#footer .container .footer__main .footer__main__block__container .footer__main__block__list .footer__main__block__list--item .footer__main__block__list--link {
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 0.846154px;
+  text-transform: uppercase;
+}
+
+footer#footer .container .footer__main .footer__main__block__container .footer__main__block__list:last-child {
+  margin-right: 0;
+}
+
+footer#footer .container .footer__main .footer__main__block.block1 {
+  max-width: 250px;
+  margin-right: calc(2rem + 5vw);
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__main .footer__main__block.block2 {
+    display: none;
+  }
+}
+
+footer#footer .container .footer__main .footer__main__block.block3 {
+  max-width: 141px;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.846154px;
+  margin-right: calc(1rem + 3vw);
+}
+
+footer#footer .container .footer__main .footer__main__block.block3 span {
+  display: block;
+}
+
+footer#footer .container .footer__main .footer__main__block.block3 .footer__main__block--address {
+  margin-bottom: 10px;
+}
+
+footer#footer .container .footer__main .footer__main__block.block3 .footer__main__block--phone {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__main .footer__main__block.block3 {
+    display: none;
+  }
+}
+
+footer#footer .container .footer__main .footer__main__block.block4 {
+  margin-top: 15px;
+}
+
+footer#footer .container .footer__main .footer__main__block.block4 .footer__main__block__social--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer#footer .container .footer__main .footer__main__block.block4 .footer__main__block__social--list .footer__main__block__social--item {
+  margin-left: 10px;
+}
+
+footer#footer .container .footer__main .footer__main__block.block4 .footer__main__block__social--list .footer__main__block__social--item .footer__main__block__social--link svg {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  footer#footer .container .footer__main .footer__main__block.block4 .footer__main__block__social--list .footer__main__block__social--item .footer__main__block__social--link svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 footer#footer .container .footer__copyright {

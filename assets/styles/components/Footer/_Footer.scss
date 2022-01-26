@@ -20,14 +20,32 @@ footer#footer {
                 line-height: 26px;
                 color: #fff;
                 letter-spacing: 0.846154px;
+
+                @media screen and (max-width: $TabletScreen) {
+                    margin-bottom: 20px;
+                }
+
+                @media screen and (max-width: 630px) {
+                    margin-right: 0;
+                }
             }
 
             .footer__signup__form {
+                display: flex;
 
                 .footer__signup__form--input {
                     height: 40px;
                     max-width: 250px;
                     padding: 16px 11px;
+
+                    @media screen and (max-width: $TabletScreen) {
+                        max-width: 200px;
+                    }
+
+                    @media screen and (max-width: $MobileScreen) {
+                        padding: 10px 5px;
+                        font-size: 12px;
+                    }
                 }
 
                 .footer__signup__form--button {
@@ -38,12 +56,143 @@ footer#footer {
                     text-transform: uppercase;
                     font-size: 13px;
                     line-height: 15px;
+
+                    @media screen and (max-width: $TabletScreen) {
+                        padding: 11px 25px;
+                    }
                 }
+            }
+
+            @media screen and (max-width: $TabletScreen) {
+                flex-wrap: wrap;
+            }
+
+            @media screen and (max-width: 630px) {
+                flex-direction: column;
             }
         }
 
         .footer__main {
             min-height: 240px;
+            color: #fff;
+            display: flex;
+
+            @media screen and (max-width: $TabletScreen) {
+                justify-content: space-between;
+            }
+
+            @media screen and (max-width: $MobileScreen) {
+                margin-top: 20px;
+            }
+
+            .footer__main__block {
+                * {
+                    color: #fff;
+                }
+                &--title {
+                    color: #fff !important;
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: 0.846154px;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                }
+
+                svg {
+                    margin-bottom: 16px;
+                }
+
+                &--para {
+                    font-size: 11px;
+                    line-height: 19px;
+                    letter-spacing: 0.85px;
+                    color: #fff;
+                }
+
+                &__container {
+                    display: flex;
+                    margin-right: calc(1rem + 3vw);
+
+                    .footer__main__block__list {
+                        margin-right: calc(1rem + 2vw);
+
+                        .footer__main__block__list--item {
+
+                            .footer__main__block__list--link {
+                                font-size: 11px;
+                                line-height: 25px;
+                                letter-spacing: 0.846154px;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                
+                &.block1 {
+                    max-width: 250px;
+                    margin-right: calc(2rem + 5vw);
+                }
+
+                &.block2 {
+                    @media screen and (max-width: $TabletScreen) {
+                        display: none;
+                    }
+                }
+
+                &.block3 {
+                    max-width: 141px;
+                    font-size: 11px;
+                    line-height: 16px;
+                    letter-spacing: 0.846154px;
+                    margin-right: calc(1rem + 3vw);
+
+                    span {
+                        display: block;
+                    }
+                    .footer__main__block--address {
+                        margin-bottom: 10px;
+                    }
+
+                    .footer__main__block--phone {
+                        margin-bottom: 10px;
+                    }
+
+                    @media screen and (max-width: $TabletScreen) {
+                        display: none;
+                    }
+                }
+
+                &.block4 {
+                    margin-top: 15px;
+
+
+                    .footer__main__block__social--list {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        .footer__main__block__social--item {
+                            margin-left: 10px;
+                            .footer__main__block__social--link {
+
+                                svg {
+                                    fill: #fff;
+                                    width: 12px;
+                                    height: 12px;
+
+                                    @media screen and (max-width: $TabletScreen) {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .footer__copyright {

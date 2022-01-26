@@ -1,11 +1,16 @@
 @import '../../_Variables.scss';
 
-header {
+#header {
     background: url('./../images/bg.jpg') center center no-repeat;
     background-size: cover;
     height: 100vh;
     min-height: 769px;
     color: #fff;
+
+    @media screen and (max-width: $MobileScreen) {
+        height: 450px;
+        min-height: auto;
+    }
 
     .container {
         padding: 40px 0 70px;
@@ -14,6 +19,10 @@ header {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: $TabletScreen) {
+            padding: 20px 0 30px;
+        }
 
         .header__logotype--link {
 
@@ -32,13 +41,13 @@ header {
                     margin-bottom: 10px;
                 }
                 @media screen and (max-width: $MobileScreen) {
-                    font-size: calc(2rem + 4vw);
-                    line-height: 3rem
+                    font-size: calc(1rem + 4vw);
+                    line-height: 2rem
                 }
             }
 
             &--subtitle {
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 19px;
                 color: #fff;
             }

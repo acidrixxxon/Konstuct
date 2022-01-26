@@ -1,16 +1,35 @@
 const closeBtn = document.querySelector('.navbar__close-btn');
-const navbar = document.querySelector('.navbar__menu')
+const nav = document.querySelector('.navbar__menu')
 const burgerIcon = document.querySelector('.navbar__burger')
 
 const closeNavbar = () => {
-    navbar.classList.remove('active')
+    nav.classList.remove('active')
 }
 
 const openNavbar = () => {
-    navbar.classList.add('active')
+    nav.classList.add('active')
 }
 
 burgerIcon.addEventListener('click',openNavbar);
 closeBtn.addEventListener('click',closeNavbar);
 
-console.log(closeBtn);
+
+// sticky header
+const navbar = document.getElementById('navbar')
+const header = document.getElementById('header')
+
+const navbarHeight = navbar.offsetHeight;
+const headerHeight = header.offsetHeight;
+
+window.addEventListener('scroll', (e) => {
+    const scrollDistance = window.scrollY
+    
+    if (scrollDistance >= headerHeight) {
+        navbar.classList.add('fixed-navbar')
+        header.style.marginTop = navbarHeight
+    } else {
+        navbar.classList.remove('fixed-navbar')
+        header.style.marginTop = 0;
+    }
+})
+
