@@ -26,10 +26,10 @@ window.addEventListener('scroll', (e) => {
     
     if (scrollDistance >= headerHeight) {
         navbar.classList.add('fixed-navbar')
-        header.style.marginTop = navbarHeight
+        document.querySelector('.about__heading').style.marginTop = `${navbarHeight + 55}px`
     } else {
         navbar.classList.remove('fixed-navbar')
-        header.style.marginTop = 0;
+        document.querySelector('.about__heading').style.marginTop = 0;
     }
 })
 
